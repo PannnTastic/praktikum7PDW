@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Komponen Web</title>
+    
+    <!-- CSS Internal -->
+    <style>
+        /* CSS Internal untuk halaman tertentu */
+        .header {
+            background: linear-gradient(135deg, #6C5CE7, #a29bfe);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header h1 {
+            font-size: 3.2rem;
+            margin-bottom: 15px;
+            animation: fadeInUp 1s ease-out;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            font-size: 1.3rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            top: -50px;
+            right: -50px;
+            z-index: 0;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            bottom: -50px;
+            left: -50px;
+            z-index: 0;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .logo {
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            border: 3px solid rgba(255,255,255,0.3);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255,255,255,0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(255,255,255,0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255,255,255,0);
+            }
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    
+    <!-- CSS Eksternal -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <i class="fas fa-code fa-2x" style="color: #6C5CE7;"></i>
+        </div>
+        <h1>Demo Komponen Web</h1>
+        <p>Implementasi komponen-komponen dasar website</p>
+        <div class="header-buttons">
+            <button class="btn-primary">Mulai Sekarang</button>
+            <button class="btn-secondary">Pelajari Lebih Lanjut</button>
+        </div>
+    </div>
+    
+    <!-- Navigasi -->
+    <div class="navbar">
+        <a href="index.html">Beranda</a>
+        <a href="produk.html">Produk</a>
+        <a href="tentang.html">Tentang Kami</a>
+        <a href="kontak.html">Kontak</a>
+    </div>
+    
+    <div class="container">
+        <h2>HTML: Struktur halaman, form, link antar halaman</h2>
+        
+        <!-- Contoh Form -->
+        <form id="demoForm" onsubmit="validasiForm(); return false;">
+            <div class="form-group">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="pesan">Pesan:</label>
+                <textarea id="pesan" name="pesan" rows="4" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn">Kirim Pesan</button>
+        </form>
+        
+        <h2>Multimedia: Gambar, audio, video</h2>
+        
+        <!-- Gambar -->
+        <div class="multimedia">
+            <h3>Gambar</h3>
+            <img src="https://via.placeholder.com/400x200" alt="Gambar Demo">
+        </div>
+        
+        <!-- Audio (Background Music atau Testimoni) -->
+        <div class="multimedia">
+            <h3>Audio - Testimoni</h3>
+            <audio controls>
+                <source src="testimoni.mp3" type="audio/mpeg">
+                Browser Anda tidak mendukung tag audio.
+            </audio>
+        </div>
+        
+        <!-- Video Demo -->
+        <div class="multimedia">
+            <h3>Video Demo</h3>
+            <video width="400" controls>
+                <source src="demo.mp4" type="video/mp4">
+                Browser Anda tidak mendukung tag video.
+            </video>
+        </div>
+        
+        <h2>Tabel: Perbandingan fitur</h2>
+        <!-- Tabel Perbandingan Fitur -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Fitur</th>
+                    <th>Paket Basic</th>
+                    <th>Paket Pro</th>
+                    <th>Paket Enterprise</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Penyimpanan</td>
+                    <td>10 GB</td>
+                    <td>50 GB</td>
+                    <td>100 GB</td>
+                </tr>
+                <tr>
+                    <td>Dukungan</td>
+                    <td>Email</td>
+                    <td>Email & Telepon</td>
+                    <td>24/7 Prioritas</td>
+                </tr>
+                <tr>
+                    <td>Pengguna</td>
+                    <td>1</td>
+                    <td>5</td>
+                    <td>Tak terbatas</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h2>Link: Navigasi dan CTA</h2>
+        <!-- CTA ke Playstore -->
+        <div class="cta-container">
+            <a href="#" class="cta-button">Download Aplikasi Kami</a>
+            <a href="#" class="playstore-link">
+                <img src="https://via.placeholder.com/200x60" alt="Download di Playstore">
+            </a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 Demo Komponen Web. Semua hak dilindungi.</p>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <!-- Inline CSS untuk elemen kecil -->
+    <p style="color: red; font-size: 14px;">Contoh text dengan CSS inline</p>
+</body>
+</html>
