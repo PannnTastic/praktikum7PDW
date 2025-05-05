@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobi - Ahmad Alfan</title>
+    
+    <style>
+        .header {
+            background: linear-gradient(135deg, #6C5CE7, #a29bfe);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header h1 {
+            font-size: 3.2rem;
+            margin-bottom: 15px;
+            animation: fadeInUp 1s ease-out;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            font-size: 1.3rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hobbies-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 40px 0;
+        }
+        
+        .hobby-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 350px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .hobby-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(108, 92, 231, 0.2);
+        }
+        
+        .hobby-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .hobby-content {
+            padding: 20px;
+        }
+        
+        .hobby-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #6C5CE7;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hobby-title i {
+            margin-right: 10px;
+        }
+        
+        .hobby-description {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <i class="fas fa-gamepad fa-2x" style="color: #6C5CE7;"></i>
+        </div>
+        <h1>Hobi</h1>
+        <p>Hal-hal yang Saya Sukai</p>
+    </div>
+    
+    <!-- Navigasi -->
+    <div class="navbar">
+        <a href="index.html">Beranda</a>
+        <a href="biodata.html">Biodata</a>
+        <a href="about.html">Tentang Saya</a>
+        <a href="hobi.html" class="active">Hobi</a>
+    </div>
+    
+    <div class="container">
+        <div class="hobbies-container">
+            <div class="hobby-card" style="animation: fadeIn 1s ease-out;">
+                <img src="game-controller.png" alt="Bermain Game" class="hobby-image">
+                <div class="hobby-content">
+                    <h2 class="hobby-title">
+                        <i class="fas fa-gamepad"></i>
+                        Bermain Game
+                    </h2>
+                    <p class="hobby-description">
+                        Saya suka menghabiskan waktu luang dengan bermain berbagai jenis game, terutama game strategi dan petualangan. 
+                        Bermain game membantu saya bersantai sekaligus mengasah kemampuan berpikir strategis dan pemecahan masalah.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="hobby-card" style="animation: fadeIn 1s ease-out 0.3s forwards; opacity: 0;">
+                <img src="programming.png" alt="Ngoding" class="hobby-image">
+                <div class="hobby-content">
+                    <h2 class="hobby-title">
+                        <i class="fas fa-code"></i>
+                        Ngoding
+                    </h2>
+                    <p class="hobby-description">
+                        Ngoding adalah salah satu aktivitas favorit saya. Saya menikmati proses memecahkan masalah lewat kode dan 
+                        membuat berbagai aplikasi. Selain menjadi keterampilan yang berharga, ngoding juga menjadi kegiatan yang 
+                        sangat menghibur bagi saya.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="hobby-card" style="animation: fadeIn 1s ease-out 0.6s forwards; opacity: 0;">
+                <img src="reading.png" alt="Belajar Hal Baru" class="hobby-image">
+                <div class="hobby-content">
+                    <h2 class="hobby-title">
+                        <i class="fas fa-book"></i>
+                        Belajar Hal Baru
+                    </h2>
+                    <p class="hobby-description">
+                        Saya selalu tertarik untuk mempelajari hal-hal baru, terutama di bidang teknologi. Mengikuti perkembangan 
+                        teknologi terbaru dan mencoba framework atau bahasa pemrograman baru merupakan kegiatan yang saya lakukan di waktu luang.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 Ahmad Alfan Alfian Irfan. Semua hak dilindungi.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

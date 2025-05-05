@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Saya - Ahmad Alfan</title>
+    
+    <style>
+        .header {
+            background: linear-gradient(135deg, #6C5CE7, #a29bfe);
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header h1 {
+            font-size: 3.2rem;
+            margin-bottom: 15px;
+            animation: fadeInUp 1s ease-out;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            font-size: 1.3rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .about-section {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 800px;
+            animation: fadeIn 1s ease-out;
+        }
+        
+        .education-item {
+            margin-bottom: 30px;
+            padding-left: 20px;
+            border-left: 4px solid #6C5CE7;
+            position: relative;
+        }
+        
+        .education-year {
+            color: #6C5CE7;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .education-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 5px 0;
+        }
+        
+        .university-logo {
+            width: 150px;
+            height: auto;
+            margin: 20px 0;
+        }
+        
+        .skills-container {
+            margin-top: 40px;
+        }
+        
+        .skill-item {
+            margin-bottom: 15px;
+        }
+        
+        .skill-name {
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .skill-bar {
+            height: 10px;
+            background: #f1f1f1;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(to right, #6C5CE7, #a29bfe);
+            border-radius: 5px;
+            animation: progressBar 2s ease-out;
+        }
+        
+        @keyframes progressBar {
+            0% { width: 0; }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <i class="fas fa-graduation-cap fa-2x" style="color: #6C5CE7;"></i>
+        </div>
+        <h1>Tentang Saya</h1>
+        <p>Pendidikan & Keterampilan</p>
+    </div>
+    
+    <!-- Navigasi -->
+    <div class="navbar">
+        <a href="index.html">Beranda</a>
+        <a href="biodata.html">Biodata</a>
+        <a href="about.html" class="active">Tentang Saya</a>
+        <a href="hobi.html">Hobi</a>
+    </div>
+    
+    <div class="container">
+        <div class="about-section">
+            <h2 style="color: #6C5CE7; margin-bottom: 30px;">Pendidikan</h2>
+            
+            <div class="education-item">
+                <div class="education-year">2022 - Sekarang</div>
+                <div class="education-title">Mahasiswa S1</div>
+                <p>Sedang menempuh S1 di Universitas Muhammadiyah Yogyakarta</p>
+                <img src="image-removebg-preview.png" alt="Logo UMY" class="university-logo">
+            </div>
+            
+            <div class="skills-container">
+                <h2 style="color: #6C5CE7; margin-bottom: 30px;">Keterampilan</h2>
+                
+                <div class="skill-item">
+                    <div class="skill-name">HTML & CSS</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-name">JavaScript</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-name">Desain Web</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-item">
+                    <div class="skill-name">Pemrograman</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2023 Ahmad Alfan Alfian Irfan. Semua hak dilindungi.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
